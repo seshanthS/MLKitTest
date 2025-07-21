@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Summary Section -->
+    <LinearLayout
+        android:id="@+id/summary_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:id="@+id/tv_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total: 0"
+            android:layout_marginEnd="16dp"/>
+        <TextView
+            android:id="@+id/tv_matched"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Matched: 0"
+            android:textColor="#388E3C"
+            android:layout_marginEnd="16dp"/>
+        <TextView
+            android:id="@+id/tv_mismatched"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mismatched: 0"
+            android:textColor="#FFA000"
+            android:layout_marginEnd="16dp"/>
+        <TextView
+            android:id="@+id/tv_failed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Failed: 0"
+            android:textColor="#D32F2F"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_select_directory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Dataset Directory" />
+
+    <Button
+        android:id="@+id/btn_export_results"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Export Results"
+        android:layout_marginTop="8dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_results"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="16dp"/>
+</LinearLayout>
